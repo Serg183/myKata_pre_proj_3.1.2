@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update/Edit</title>
+</head>
+<body>
+****** Edit user ******
+<form action="#" th:action="@{/update}" th:object="${user}" method="POST">
+    <label for="user_id">id</label>
+    <input readonly type="number" th:field="*{user_id}" id="user_id" placeholder="id">
+    <br>
+    <br>
+    <label for="username">Name</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="Username">
+    <br>
+    <br>
+    <label for="email">Last name</label>
+    <input type="text" th:field="*{email}" id="email" placeholder="email">
+    <br>
+    <br>
+    <label for="password">Age</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="password">
+    <br>
+    <br>
+    <input type="submit" value="Update user"/>
+</form>
+</body>
+</html>
